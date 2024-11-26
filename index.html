@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beanote - 智能笔记助手</title>
+    <meta name="description" content="Beanote - 智能笔记助手，结合 Zettelkasten 笔记法和 AI 技术，帮助您高效记录和管理知识">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="Beanote Logo" class="h-8">
+                    <span class="ml-3 text-xl font-bold">Beanote</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900">功能</a>
+                    <a href="#about" class="text-gray-600 hover:text-gray-900">关于</a>
+                    <a href="#download" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600">
+                        立即下载
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- 左侧文本内容 -->
+                <div class="md:w-1/2 md:pr-12" data-aos="fade-right">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+                        Beanote.AI
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed mb-12">
+                        大语言模型与Zettelkasten结合的笔记应用，高效记录、整理和搜索，并构建个人知识体系。你可以持续和AI对话，探索问题、激发灵感，让每一条记录变得更有价值。
+                    </p>
+                    
+                    <!-- 下载按钮 -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="inline-flex items-center px-6 py-3 rounded-full bg-black text-white hover:bg-gray-800 transition-all duration-300">
+                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            App Store 下载
+                        </a>
+                        <a href="#" class="inline-flex items-center px-6 py-3 rounded-full bg-black text-white hover:bg-gray-800 transition-all duration-300">
+                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.523 15.3414c-.5511.2969-1.1608.4395-1.7705.4395-.5498 0-1.0996-.1426-1.5694-.4395l-4.1904-2.3975c-.0898-.0598-.1797-.1196-.2695-.1794-.0898.0598-.1797.1196-.2695.1794l-4.1904 2.3975c-.47.2969-1.0197.4395-1.5695.4395-.6097 0-1.2194-.1426-1.7705-.4395-.7494-.4196-1.2592-1.1989-1.2592-2.0781v-4.795c0-.8792.5098-1.6585 1.2592-2.0781.5511-.2969 1.1608-.4395 1.7705-.4395.5498 0 1.0996.1426 1.5694.4395l4.1904 2.3975c.0898.0598.1797.1196.2695.1794.0898-.0598.1797-.1196.2695-.1794l4.1904-2.3975c.47-.2969 1.0197-.4395 1.5695-.4395.6097 0 1.2194.1426 1.7705.4395.7494.4196 1.2592 1.1989 1.2592 2.0781v4.795c0 .8792-.5098 1.6585-1.2592 2.0781z"/>
+                            </svg>
+                            Android APK 下载
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 右侧应用展示 -->
+                <div class="md:w-1/2 mt-12 md:mt-0" data-aos="fade-left">
+                    <div class="relative flex justify-end">
+                        <img 
+                            src="images/app-preview2.png" 
+                            alt="Beanote App Preview" 
+                            class="app-preview"
+                            width="280"
+                            height="605"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <!-- 在第一个和第二个功能块之间添加 -->
+            <div class="py-20 bg-gray-50" data-aos="fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="relative">
+                        <!-- 装饰性引号 -->
+                        <div class="absolute -left-4 -top-4 w-16 h-16 text-purple-200">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="text-center max-w-4xl mx-auto">
+                            <p class="text-3xl md:text-4xl font-bold text-gray-900 leading-relaxed">
+                                "记录生活，激发灵感。"
+                            </p>
+                            <div class="mt-6 flex items-center justify-center">
+                                <div class="flex items-center">
+                                    <span class="text-lg text-gray-600 font-medium">beanote.ai</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 装饰性背景 -->
+                        <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-purple-100 rounded-full opacity-50 blur-lg"></div>
+                        <div class="absolute left-1/4 top-1/2 w-32 h-32 bg-blue-100 rounded-full opacity-30 blur-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- 核心功能区 -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">核心功能</h2>
+
+            <!-- 功能1：无痛录入 -->
+            <div class="flex flex-col md:flex-row items-center mb-32" data-aos="fade-up">
+                <div class="md:w-1/2 md:pr-12">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                        如何做到无痛录入、高效整理？
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-blue-600 mb-2">多模态输入，快速记录</h4>
+                            <p class="text-gray-600">支持文本、语音、图片输入，结合语音实时转文本功能和大语言模型的智能优化，轻松完成记录，节省时间。</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-blue-600 mb-2">多层级标签与双向链接</h4>
+                            <p class="text-gray-600">灵活的标签系统支持复杂主题管理（如 #工作/文档），通过双向链接构建动态知识网络，促进跨主题联想和思维延展。</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-blue-600 mb-2">整理与智能回顾</h4>
+                            <p class="text-gray-600">内置智能整理工具，定期提醒用户回顾过往笔记，从记录中挖掘深层灵感与价值。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
+                    <img 
+                        src="images/feature-input.png" 
+                        alt="无痛录入演示" 
+                        class="feature-image w-full max-w-md mx-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
+                        width="480"
+                        height="240"
+                    >
+                </div>
+            </div>
+
+            <!-- 功能2：BeanX.AI 工作原理 -->
+            <div class="flex flex-col md:flex-row items-center mb-32" data-aos="fade-up">
+                <div class="md:w-1/2 md:pr-12">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                        BeanX.AI 是如何工作的？
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-purple-600 mb-2">七大 AI 助手</h4>
+                            <p class="text-gray-600">包括跨域联想、知识解读、行动指导、成长教练等七种角色，从多角度启发用户思考。</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-purple-600 mb-2">自动标签与关联笔记</h4>
+                            <p class="text-gray-600">用户只需专注于记录，BeanX.AI 会自动生成相关标签，整理笔记，提升效率。</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-purple-600 mb-2">智能反馈</h4>
+                            <p class="text-gray-600">根据用户问题，提供定制化的建议和深度洞察，帮助用户更好地解决问题或规划下一步。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
+                    <img 
+                        src="images/feature-ai.png" 
+                        alt="BeanX.AI 工作原理" 
+                        class="feature-image w-full max-w-md mx-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
+                        width="480"
+                        height="240"
+                    >
+                </div>
+            </div>
+
+            <!-- 功能3：链接世界 -->
+            <div class="flex flex-col md:flex-row items-center" data-aos="fade-up">
+                <div class="md:w-1/2 md:pr-12">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                        如何帮助你链接世界？
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-green-600 mb-2">从笔记生成查询</h4>
+                            <p class="text-gray-600">将笔记中的内容转化为智能搜索查询，跨平台整合 Google 和 Bing，提供多角度的答案，拓展知识边界。</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-green-600 mb-2">智能改写与分享</h4>
+                            <p class="text-gray-600">通过 AI 改写笔记内容，一键生成适合社交平台的分享文本，让记录生活变得更轻松有趣。</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4 class="text-xl font-semibold text-green-600 mb-2">多轮对话式探索</h4>
+                            <p class="text-gray-600">支持持续深入的对话，从不同视角挖掘信息，帮助用户将个人灵感与全球知识连接。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
+                    <img 
+                        src="images/feature-connect.png" 
+                        alt="链接世界演示" 
+                        class="feature-image w-full max-w-md mx-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
+                        width="480"
+                        height="240"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 用户评价区块 -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">
+                Trusted by Aspiring Minds
+            </h2>
+            <h3 class="text-4xl font-bold text-center text-gray-900 mb-16" data-aos="fade-up">
+                Around the Globe
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 评价卡片 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="0">
+                    <div class="mb-6">
+                        <svg class="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Beanote 能捕捉情感的细微差别，让我感到平静和安心。通过它，我感受到被倾听、被理解..."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="images/avatar-1.jpg" alt="User Avatar" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Elizabeth Gillaspy</h4>
+                            <div class="flex items-center">
+                                <span class="text-gray-600">母亲</span>
+                                <img src="images/flag-us.svg" alt="US Flag" class="w-4 h-4 ml-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评价卡片 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6">
+                        <svg class="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "我把 Beanote 当作一款正念应用来使用。它真的很适合整理思绪和反思感受。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="images/avatar-2.jpg" alt="User Avatar" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Maki Okubo</h4>
+                            <div class="flex items-center">
+                                <span class="text-gray-600">网页设计师</span>
+                                <img src="images/flag-jp.svg" alt="Japan Flag" class="w-4 h-4 ml-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评价卡片 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6">
+                        <svg class="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Beanote 帮我记录了完整的成长历程，并为我指明了方向现在我是一名36岁的大学生，非常感谢它帮我做出这个决定。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="images/avatar-3.jpg" alt="User Avatar" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Ingrid Fontana</h4>
+                            <div class="flex items-center">
+                                <span class="text-gray-600">数字营销师</span>
+                                <img src="images/flag-es.svg" alt="Spain Flag" class="w-4 h-4 ml-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">联系我们</h3>
+                    <p>📧 support@beanote.ai</p>
+                    <p>🌐 beanote.ai</p>
+                </div>
+                <!-- 其他页脚内容 -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
