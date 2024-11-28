@@ -30,8 +30,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center bg-white overflow-hidden">
-        <div class="container mx-auto px-6">
+    <section class="relative min-h-screen flex items-center bg-white overflow-hidden hero-section">
+        <div class="container mx-auto px-6 hero-content">
             <div class="flex flex-col md:flex-row items-center">
                 <!-- 左侧文本内容 -->
                 <div class="md:w-1/2 md:pr-12" data-aos="fade-right">
@@ -59,15 +59,23 @@
                     </div>
                 </div>
 
-                <!-- 右侧应用展示 -->
+                <!-- 右侧应用展示：交错的手机界面 -->
                 <div class="md:w-1/2 mt-12 md:mt-0" data-aos="fade-left">
-                    <div class="relative flex justify-center">
+                    <div class="phone-showcase">
                         <img 
-                            src="images/app-preview2.png" 
-                            alt="Beanote App Preview" 
-                            class="app-preview"
-                            width="280"
-                            height="605"
+                            src="images/screenshot-1.png" 
+                            alt="系统功能截图1" 
+                            class="phone-screen left"
+                        >
+                        <img 
+                            src="images/screenshot-2.png" 
+                            alt="系统功能截图2" 
+                            class="phone-screen center"
+                        >
+                        <img 
+                            src="images/screenshot-3.png" 
+                            alt="系统功能截图3" 
+                            class="phone-screen right"
                         >
                     </div>
                 </div>
@@ -106,110 +114,6 @@
             </div>
         </div> 
     </section>
-
-    <!-- 核心功能区 -->
-    <section class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">核心功能</h2>
-
-            <!-- 功能1：无痛录入 -->
-            <div class="flex flex-col md:flex-row items-center mb-32" data-aos="fade-up">
-                <div class="md:w-1/2 md:pr-12">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">
-                        如何做到无痛录入、高效整理？
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-blue-600 mb-2">多模态输入，快速记录</h4>
-                            <p class="text-gray-600">支持文本、语音、图片输入，结合语音实时转文本功能和大语言模型的智能优化，轻松完成记录，节省时间。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-blue-600 mb-2">多层级标签与双向链接</h4>
-                            <p class="text-gray-600">灵活的标签系统支持复杂主题管理（如 #工作/文档），通过双向链接构建动态知识网络，促进跨主题联想和思维延展。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-blue-600 mb-2">整理与智能回顾</h4>
-                            <p class="text-gray-600">内置智能整理工具，定期提醒用户回顾过往笔记，从记录中挖掘深层灵感与价值。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
-                    <img 
-                        src="images/feature-input.png" 
-                        alt="无痛录入演示" 
-                        class="feature-image w-full max-w-md mx-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-                        width="480"
-                        height="240"
-                    >
-                </div>
-            </div>
-
-            <!-- 功能2：BeanX.AI 工作原理 -->
-            <div class="flex flex-col md:flex-row items-center mb-32" data-aos="fade-up">
-                <div class="md:w-1/2 md:pr-12">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">
-                        BeanX.AI 是如何工作的？
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-purple-600 mb-2">七大 AI 助手</h4>
-                            <p class="text-gray-600">包括跨域联想、知识解读、行动指导、成长教练等七种角色，从多角度启发用户思考。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-purple-600 mb-2">自动标签与关联笔记</h4>
-                            <p class="text-gray-600">用户只需专注于记录，BeanX.AI 会自动生成相关标签，整理笔记，提升效率。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-purple-600 mb-2">智能反馈</h4>
-                            <p class="text-gray-600">根据用户问题，提供定制化的建议和深度洞察，帮助用户更好地解决问题或规划下一步。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
-                    <img 
-                        src="images/feature-ai.png" 
-                        alt="BeanX.AI 工作原理" 
-                        class="feature-image w-full max-w-md mx-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-                        width="480"
-                        height="240"
-                    >
-                </div>
-            </div>
-
-            <!-- 功能3：链接世界 -->
-            <div class="flex flex-col md:flex-row items-center" data-aos="fade-up">
-                <div class="md:w-1/2 md:pr-12">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">
-                        如何帮助你链接世界？
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-green-600 mb-2">从笔记生成查询</h4>
-                            <p class="text-gray-600">将笔记中的内容转化为智能搜索查询，跨平台整合 Google 和 Bing，提供多角度的答案，拓展知识边界。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-green-600 mb-2">智能改写与分享</h4>
-                            <p class="text-gray-600">通过 AI 改写笔记内容，一键生成适合社交平台的分享文本，让记录生活变得更轻松有趣。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4 class="text-xl font-semibold text-green-600 mb-2">多轮对话式探索</h4>
-                            <p class="text-gray-600">支持持续深入的对话，从不同视角挖掘信息，帮助用户将个人灵感与全球知识连接。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
-                    <img 
-                        src="images/feature-connect.png" 
-                        alt="链接世界演示" 
-                        class="feature-image w-full max-w-md mx-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-                        width="480"
-                        height="240"
-                    >
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- 用户评价区块 -->
     <section class="py-20 bg-gray-50">

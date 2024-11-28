@@ -1,25 +1,59 @@
-/* 自定义样式 */
+/* 清理重复的样式定义 */
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 截图展示容器 */
+.screenshots-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.screenshot-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.screenshot-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 功能卡片样式 */
 .feature-card {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-}
-
-.download-btn {
-    transition: transform 0.2s ease;
-}
-
-.download-btn:hover {
-    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* 响应式调整 */
 @media (max-width: 768px) {
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    .screenshots-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .screenshot-image {
+        max-width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -33,273 +67,11 @@
     opacity: 1;
 }
 
-/* 功能卡片样式增强 */
-.feature-card {
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.feature-card ul li {
-    position: relative;
-    padding-left: 1rem;
-    line-height: 1.6;
-}
-
-/* 功能图标动画 */
-.feature-card:hover .w-16 {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .feature-card {
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* 功能区样式 */
-.feature-item {
-    padding: 1.5rem;
-    border-radius: 1rem;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .md\:w-1/2 {
-        width: 100%;
-    }
-    
-    .md\:pl-8,
-    .md\:pr-8 {
-        padding: 0;
-    }
-    
-    .feature-item {
-        margin-bottom: 1rem;
-    }
-}
-
-/* 图片动画效果 */
-.rounded-lg {
-    transition: transform 0.3s ease;
-}
-
-.rounded-lg:hover {
-    transform: scale(1.02);
-}
-
 /* Hero Section 样式 */
-.gradient-text {
-    background: linear-gradient(to right, #3B82F6, #8B5CF6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* 动画效果 */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-}
-
-.app-preview-float {
-    animation: float 6s ease-in-out infinite;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .hero-section {
-        padding-top: 6rem;
-        padding-bottom: 4rem;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-}
-
-/* 装饰性背景动画 */
-@keyframes pulse-slow {
-    0% { transform: scale(1); opacity: 0.2; }
-    50% { transform: scale(1.1); opacity: 0.3; }
-    100% { transform: scale(1); opacity: 0.2; }
-}
-
-.blur-bg {
-    animation: pulse-slow 10s ease-in-out infinite;
-}
-
-/* 评价卡片样式 */
-.testimonial-card {
-    transition: all 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-/* 引号图标动画 */
-.testimonial-card:hover svg {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-/* 头像样式 */
-.avatar-container {
-    position: relative;
-}
-
-.avatar-container::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #8B5CF6;
-    border-radius: 50%;
-    top: -2px;
-    left: -2px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.testimonial-card:hover .avatar-container::after {
-    opacity: 1;
-}
-
-/* 浮动动画 */
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(3deg); }
-    50% { transform: translateY(-10px) rotate(3deg); }
-}
-
-.animate-float {
-    animation: float 6s ease-in-out infinite;
-}
-
-/* 渐变背景动画 */
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.bg-gradient-animate {
-    background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-}
-
-/* 玻璃拟态效果 */
-.glassmorphism {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* 功能项样式 */
-.feature-item {
-    padding: 1.5rem;
-    border-radius: 1rem;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* 功能图片动画 */
-.feature-image {
-    transition: transform 0.5s ease;
-}
-
-.feature-image:hover {
-    transform: scale(1.05);
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .feature-item {
-        margin-bottom: 1rem;
-    }
-    
-    .md\:pr-12 {
-        padding-right: 0;
-    }
-}
-
-/* AI 助理卡片样式 */
-.ai-assistant-card {
-    transition: all 0.3s ease;
-}
-
-.ai-assistant-card:hover {
-    transform: translateY(-5px);
-}
-
-/* 图标动画 */
-.ai-assistant-card:hover .w-14 {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-/* 渐变背景 */
-.bg-gradient-hover {
-    background-size: 200% 200%;
-    transition: all 0.3s ease;
-}
-
-.bg-gradient-hover:hover {
-    background-position: right center;
-}
-
-/* 引用模块样式 */
-.quote-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.quote-section::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(139, 92, 246, 0.05), rgba(59, 130, 246, 0.05));
-    transform: rotate(-3deg) scale(1.2);
-    z-index: -1;
-}
-
-/* 引号动画 */
-@keyframes float-quote {
-    0%, 100% { transform: translateY(0) rotate(-10deg); }
-    50% { transform: translateY(-5px) rotate(-10deg); }
-}
-
-.quote-section svg {
-    animation: float-quote 6s ease-in-out infinite;
-}
-
-/* 简单的应用预览图样式 */
 .app-preview {
     width: 280px;
-    height: 605px;
-    object-fit: cover;
-    transform: rotate(12deg);
+    height: auto;
+    transform: rotate(3deg);
     transition: transform 0.5s ease;
 }
 
@@ -307,26 +79,96 @@
     transform: rotate(0deg);
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .app-preview {
-        width: 220px;
-        height: 476px;
-        transform: rotate(0deg);
-    }
-}
+/* 移除重复的动画定义 */
 
-/* 功能区图片样式 */
-.feature-image {
-    max-width: 480px; /* 最大宽度限制 */
-    width: 100%;
-    height: auto;
+/* 手机界面展示样式 */
+.phone-showcase {
+    position: relative;
+    max-width: 700px;
+    height: 500px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* 响应式调整 */
+.phone-screen {
+    position: absolute;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.phone-screen.left {
+    width: 220px;
+    transform: translateX(-60%) rotate(-15deg);
+    z-index: 1;
+}
+
+.phone-screen.center {
+    width: 280px;
+    transform: translateY(-2%);
+    z-index: 2;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.phone-screen.right {
+    width: 220px;
+    transform: translateX(60%) rotate(15deg);
+    z-index: 1;
+}
+/* 
+.phone-screen:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+} */
+
+/* 移动端适配 */
 @media (max-width: 768px) {
-    .feature-image {
-        max-width: 360px; /* 移动端更小的尺寸 */
+    .phone-showcase {
+        height: auto;
+        padding: 2rem 0;
+        flex-direction: column;
+        gap: 2rem;
     }
+
+    .phone-screen {
+        position: relative;
+        transform: none !important;
+        width: 280px;
+    }
+
+    .phone-screen.left,
+    .phone-screen.center,
+    .phone-screen.right {
+        transform: none;
+    }
+}
+
+/* Hero Section 背景装饰 */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../images/bean-mascot.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.05; /* 调整透明度让它更适合作为背景 */
+    z-index: 0;
+}
+
+/* 确保内容在背景之上 */
+.hero-content {
+    position: relative;
+    z-index: 1;
 } 
